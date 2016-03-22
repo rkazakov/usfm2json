@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var TRANSLATION = 'KJV';
 var USFM_FILE = TRANSLATION.toLowerCase() + '.usfm';
 var JSON_FILE = TRANSLATION.toLowerCase() + '.json';
