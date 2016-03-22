@@ -6,4 +6,5 @@ Convert Bibles in USFM format to JSON
  * npm install
  * chmod +x ./convert.js
  * ./convert.js <path/to/your/file.usfm>
+ * Take your json file in the "json/" folder
 
