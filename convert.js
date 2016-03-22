@@ -1,7 +1,14 @@
 #!/usr/bin/env node
-var TRANSLATION = process.argv[2] || 'KJV';
-var USFM_FILE = TRANSLATION.toLowerCase() + '.usfm';
-var JSON_FILE = TRANSLATION.toLowerCase() + '.json';
+
+if(!process.argv[2]) return console.log("Error: Must provide a filename as a parameter");
+
+var TRANSLATION = process.argv[2];
+var USFM_FILE = TRANSLATION.toLowerCase(); // + '.usfm';
+var JSON_FILE; //= TRANSLATION.toLowerCase(); // + '.json';
+if(!/(\w+)\.usfm$/.test(TRANSLATION)) return console.log("Error: must be a file with .ufsm extension");
+
+JSON_FILE = TRANSLATION.match(/(\w+)\.usfm$/)[1] + ".json";
+
 var HEADERS = ['book', 'chapter', 'verse', 'subverse', 'order', 'text'];
 
 var bookRefs = require('./bookRefs').bookRefs;
@@ -27,6 +34,6 @@ converter.transform = function(json, row, index) {
 };
 
 var readStream = fs.createReadStream(USFM_FILE);
-var writeStream = fs.createWriteStream(JSON_FILE);
+var writeStream = fs.createWriteStream('./json/' + JSON_FILE);
 
 readStream.pipe(converter).pipe(writeStream);
