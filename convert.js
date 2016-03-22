@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var TRANSLATION = 'KJV';
+var TRANSLATION = process.argv[2] || 'KJV';
 var USFM_FILE = TRANSLATION.toLowerCase() + '.usfm';
 var JSON_FILE = TRANSLATION.toLowerCase() + '.json';
 var HEADERS = ['book', 'chapter', 'verse', 'subverse', 'order', 'text'];
