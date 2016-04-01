@@ -1,4 +1,4 @@
-var TRANSLATION = 'KJV';
+var TRANSLATION = 'ASV';
 var USFM_FILE = TRANSLATION.toLowerCase() + '.usfm';
 var JSON_FILE = TRANSLATION.toLowerCase() + '.json';
 var HEADERS = ['book', 'chapter', 'verse', 'subverse', 'order', 'text'];
