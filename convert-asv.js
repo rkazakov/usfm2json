@@ -1,10 +1,10 @@
 var TRANSLATION = 'ASV';
-var USFM_FILE = TRANSLATION.toLowerCase() + '.usfm';
-var JSON_FILE = TRANSLATION.toLowerCase() + '.json';
+var USFM_FILE = 'usfm/' + TRANSLATION.toLowerCase() + '.usfm';
+var JSON_FILE = 'json/' + TRANSLATION.toLowerCase() + '.json';
 var HEADERS = ['book', 'chapter', 'verse', 'subverse', 'order', 'text'];
 
-var bookRefs = require('./bookRefs').bookRefs;
-var bookNames = require('./bookNames').bookNamesEN;
+var bookRefs = require('./lib/en/bookRefs').bookRefs;
+var bookNames = require('./lib/en/bookNames').bookNames;
 
 var fs = require('fs');
 var Converter = require("csvtojson").Converter;
