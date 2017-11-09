@@ -9,7 +9,7 @@ const HEADERS = ['book', 'chapter', 'verse', 'text'];
 const USFM_FILE = 'usfm/' + TRANSLATION.toLowerCase() + '.usfm';
 const JSON_FILE = 'json/' + TRANSLATION.toLowerCase() + '.json';
 
-const stream = csv({ delimiter: '\t', constructResult: false, headers: HEADERS })
+const csvStream = csv({ delimiter: '\t', headers: HEADERS })
 .transf(json => {
   json.translation_id = TRANSLATION;
   json.chapter = Number(json.chapter);
@@ -29,4 +29,4 @@ const stream = csv({ delimiter: '\t', constructResult: false, headers: HEADERS }
 
 const readStream = fs.createReadStream(USFM_FILE);
 const writeStream = fs.createWriteStream(JSON_FILE);
-readStream.pipe(stream).pipe(writeStream);
+readStream.pipe(csvStream).pipe(writeStream);
