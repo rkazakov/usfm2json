@@ -25,19 +25,24 @@ Convert Bibles in USFM format to JSON
 
 ### English
 
-#### ASV
+#### American Standard Version (ASV)
 ```
 node convert-asv.js
 ```
 
-#### KJV
+#### King James Version (KJV)
 ```
 node convert-kjv.js
 ```
 
 ### Russian
 
-#### CRTB
+#### Russian Synodal Translation (RST)
+```
+node convert-rst.js
+```
+
+#### Contemporary Russian Translation of the Bible (CRTB)
 ```
 node convert-crtb.js
 ```
