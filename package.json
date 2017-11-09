@@ -1,14 +1,14 @@
 {
   "name": "usfm2json",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
-  "main": "convert.js",
+  "main": "convert-asv.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Dev4Christ",
+  "author": "Ruslan Kazakov",
   "license": "MIT",
   "dependencies": {
-    "csvtojson": "^0.5.2"
+    "csvtojson": "^1.1.9"
   }
 }
