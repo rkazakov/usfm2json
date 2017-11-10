@@ -47,6 +47,11 @@ node convert-rst.js
 node convert-crtb.js
 ```
 
+#### The New Russian Translation (NRT)
+```
+node convert-nrt.js
+```
+
 ## Development
 
 ### Prerequisites
