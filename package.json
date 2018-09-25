@@ -9,6 +9,6 @@
   "author": "Dev4Christ",
   "license": "MIT",
   "dependencies": {
-    "csvtojson": "^0.5.2"
+    "csvtojson": "^1.0.0"
   }
 }
